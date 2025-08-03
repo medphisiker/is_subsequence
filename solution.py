@@ -24,14 +24,16 @@ class Solution:
             return False
 
         s_pointer = 0
+        len_s = len(s) # оптимизация
 
-        for t_pointer in range(len(t)):
-            s_is_complete = s_pointer < len(s)
-            if s_is_complete and s[s_pointer] == t[t_pointer]:
-                s_pointer += 1
-            
-            # ранний выход
-            if not s_is_complete:
+        for char_t in t:
+            # Если мы еще не нашли все символы s
+            if s_pointer < len_s:
+                # Если символы совпадают, продвигаем указатель в s
+                if s[s_pointer] == char_t:
+                    s_pointer += 1
+            else:
+                # Все символы s найдены, ранний выход
                 break
 
-        return s_pointer == len(s)
+        return s_pointer == len_s
