@@ -61,4 +61,4 @@
 
 ## Результат решения
 
-![](repo_pics\LeetCode.jpg)
+![](./repo_pics/LeetCode.jpg)
