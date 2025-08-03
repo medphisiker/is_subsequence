@@ -23,17 +23,17 @@ class Solution:
         if len(s) > len(t):
             return False
 
-        s_pointer = 0
+        s_idx = 0
         len_s = len(s) # оптимизация
 
         for char_t in t:
             # Если мы еще не нашли все символы s
-            if s_pointer < len_s:
+            if s_idx < len_s:
                 # Если символы совпадают, продвигаем указатель в s
-                if s[s_pointer] == char_t:
-                    s_pointer += 1
+                if s[s_idx] == char_t:
+                    s_idx += 1
             else:
                 # Все символы s найдены, ранний выход
                 break
 
-        return s_pointer == len_s
+        return s_idx == len_s
