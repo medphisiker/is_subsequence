@@ -63,7 +63,7 @@ def test():
     assert is_subsequence
     
     # Тест нет ни одной совпадающей буквы
-    #    p
+    #            p
     # t: zyzqwerty
     #
     #    p

@@ -26,7 +26,12 @@ class Solution:
         s_pointer = 0
 
         for t_pointer in range(len(t)):
-            if s_pointer < len(s) and s[s_pointer] == t[t_pointer]:
+            s_is_complete = s_pointer < len(s)
+            if s_is_complete and s[s_pointer] == t[t_pointer]:
                 s_pointer += 1
+            
+            # ранний выход
+            if not s_is_complete:
+                break
 
         return s_pointer == len(s)
